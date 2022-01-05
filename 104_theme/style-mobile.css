@@ -1,0 +1,378 @@
+/*
+Theme Name: Le 104
+Theme URI: https://adelineb.promo-91.codeur.online/le104
+Author: ACS Auxerre
+Author URI: https://adelineb.promo-91.codeur.online/le104
+Description: Garage solidaire à Dijon - Le 104
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+/*******Dans nos feuilles de style nous devons spécifier ce bloc ci-dessus qui écrit le nom du thème ainsi 
+que les auteurs, wordpress le lit et le reconnaît pour l'installation du thème dans le dashboard******/
+    :root {
+        --jauneHeader: #FFCE78;
+        --sectionOrange: #F49523;
+        --pointsRose: #E0233E;
+        --noirMarine: #150E21;
+        --bleuBaseline: #3A9377;
+        --contactBleu: #80C1AB;
+        --sectionKaki: #8E9775;
+        --sectionBeige: #E0C8A9;       
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    body {
+        /*font-family: 'Bebas Neue', cursive;*/
+        font-family: 'Georama', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /**************HEADER****************/
+
+    header {
+       background: var(--jauneHeader) no-repeat url('https://adelineb.promo-91.codeur.online/le104/wp-content/uploads/2021/12/fond-voiture.svg'); 
+       background-size: 100%;
+       background-position: right -8vw bottom 0;
+       overflow-x: hidden;
+       height: 80vh;  
+       font-family: 'Bebas Neue', cursive;     
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .nav #burger {
+        max-width: 10%;
+        margin-left: 60%;
+        margin-top: 3em;       
+    }
+
+    header ul {
+        position: absolute;
+        z-index: 500;
+        background-color: var(--sectionBeige);
+        margin-top: 10em;
+        padding: 1em;
+        display: none;                    
+    }
+
+    header ul li a {
+        color: var(--noirMarine);
+        font-size: 2em;        
+    }
+
+    .logo-baselines #logo-header {
+        max-width: 70%;
+    }
+
+    .titres {
+        margin-left: 3em;
+        margin-top: 5em;
+    }
+
+    .titres h2 {
+        color: var(--bleuBaseline);
+        width: 60%;
+    }
+
+    /*****************CONTENU - Prendre RDV*********************/
+
+    .cards-services {
+        background: var(--sectionKaki); 
+        height: 100vh;        
+    }
+
+    .parent-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+    }
+
+    .contenu-card {
+        position: relative;
+        display: none;
+        border: 2px solid var(--noirMarine);
+        border-radius: 40px 0 0 0;
+        padding: 2em;
+        width: 50vw;
+        height: 20%;
+    }
+
+    .contenu-card.active {
+        transition: 1s;
+        display: block;
+    }
+
+    .contenu-card .img-service {
+        max-width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .contenu-card .suivant {
+        position: absolute;
+        z-index: 500;
+        background-color: var(--noirMarine);
+        padding: 1em;
+        width: 40px;
+        height: 10px;
+        right: -10%;
+        bottom: 2vw;
+        cursor: pointer;
+    }
+
+    .titre-card, .texte-card {       
+        padding-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+     
+    .bouton-rdv {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        margin-top: 55px;  
+        padding-bottom: 20px;
+        position: relative;
+        cursor: pointer;
+        font-family: 'Bebas Neue', cursive;
+       
+    }
+
+    .bouton-rdv a {
+        color: var(--noirMarine);
+        font-size: 1.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 0.8em;
+        width: 130px;
+        height: 5px;
+        border: 2px solid var(--noirMarine);
+    }
+
+    .bouton-rdv .rectangle-blanc {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 130px;
+        height: 9px;
+        padding: 20px;
+        border: 2px solid var(--sectionBeige);
+        position: absolute;
+        z-index: 1;
+        left: 50%; 
+        transform: translate(-45%, 0);
+        top: 7.5px;  
+
+    }
+
+     /***************CONTENU - Tarifs**************************/
+
+    .tarifs {
+        background: linear-gradient(290deg, #CA9D68, var(--sectionBeige));
+    }
+
+    .container-tarifs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding-top: 50px;
+    }
+
+    .carte-tarif {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--noirMarine);
+        border-radius: 40px 0 0 0;
+        padding: 2em;
+        width: 50vw;
+        height: 20%;
+    }
+
+    .carte-tarif .titre-tarifs {
+        font-size: 1.8em;
+        padding-bottom: 1em;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .carte-tarif .texte-tarifs {
+        font-family: 'Georama', sans-serif;
+        font-size: 1em;
+        padding-bottom: 1em;
+    }
+
+    .carte-tarif .bouton-tarifs {
+        background-color: var(--noirMarine);
+        width: 150px;
+        height: 20px;
+        padding: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+        color: var(--sectionBeige);
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    /**************CONTENU - Starters************************/
+
+    .starters {
+        background-color: var(--sectionOrange);
+        font-family: 'Bebas Neue', cursive;
+      
+    }
+
+    #encadrement {
+        display: none;
+    }
+
+    .titre-pompe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titre-pompe h5 {
+        padding-top: 2em;
+        font-size: 3em;
+        text-shadow: var(--sectionBeige) 3px 1px; 
+        text-align: center;
+        width: 80%;
+    }
+
+    .titre-pompe img {
+        padding-top: 1em;
+        max-width: 85%;
+        margin-left: -28vw;
+        overflow-x: hidden;
+
+    }
+
+    .starters-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-detail {
+        padding-bottom: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .picto {
+        max-width: 64%;
+        padding-bottom: 2.5em;
+    }
+
+   #oil {
+        max-width: 70%;
+    }
+
+    .items-menu {
+        font-size: 1.6em;
+        white-space: pre-line;
+    }
+
+    /**************CONTENU - Contact************************/
+
+    .contact {
+        background-color: var(--contactBleu);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .contact img {
+        max-width: 70%;
+    }
+
+    .coordonnees {
+        padding-top: 4em;
+    }
+
+    .coordonnees p {
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding-bottom: 1em;
+        padding-top: 2em;
+        white-space: pre-line;
+        font-size: 1.4em;
+    }
+
+    /**************FOOTER************************/
+
+    footer {
+        background-color: var(--jauneHeader);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    footer #logo-footer {
+        max-width: 50%;
+        display: block;
+        margin: auto;
+        padding-top: 1em;
+        padding-bottom: 0.8em;
+    }
+
+    footer #motoline {
+        display: none;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2em;
+    }
+
+    footer ul li a {
+        color: var(--bleuBaseline);
+        font-size: 1.3em;
+    }
+
+
+    /*****************************Media queries*********************************/
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .nav #burger {
+            max-width: 7%;                 
+        }
+
+        .titres h2 {
+            width: 40%;
+        }
+
+        .parent-card {
+           padding-top: 32%;
+        }
+      
+    }

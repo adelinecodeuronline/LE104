@@ -1,0 +1,232 @@
+/*
+Theme Name: Le 104
+Theme URI: https://adelineb.promo-91.codeur.online/le104
+Author: ACS Auxerre
+Author URI: https://adelineb.promo-91.codeur.online/le104
+Description: Garage solidaire à Dijon - Le 104
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+@media (min-width: 992px) {
+:root {
+  --jauneHeader: #FFCE78;
+  --sectionOrange: #F49523;
+  --pointsRose: #E0233E;
+  --noirMarine: #150E21;
+  --bleuBaseline: #3A9377;
+  --contactBleu: #80C1AB;
+  --sectionKaki: #8E9775;
+  --sectionBeige: #E0C8A9;    
+}
+
+/*********************HEADER***********************/
+
+header {
+  background-size: 85%;
+  height: 100vh; 
+}
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+}
+
+
+.nav #burger {
+  display: none;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 0;
+  gap: 50px;
+                
+}
+
+
+header ul li a {
+  padding-top: 0;
+  font-size: 1.2em; 
+}
+
+.logo-baselines #logo-header {
+  max-width: 40%;
+}
+
+.titres h2 {
+  width: 100%;
+}
+
+ /*****************CONTENU - Prendre RDV*********************/
+
+ .cards-services {
+  background: var(--sectionKaki) no-repeat url('https://adelineb.promo-91.codeur.online/le104/wp-content/uploads/2021/12/formesgeometriques.svg'); 
+  background-size: 70%;
+  background-position: right 0 top 50%; 
+}
+
+.parent-card {
+  margin-right: 25%;
+}
+
+.contenu-card {
+  flex-direction: row;
+  padding: 2em;
+  width: 50vw;
+  height: 25vw;
+}
+
+.contenu-card .img-service {
+  max-width: 50%;  
+}
+
+.contenu-card .suivant {
+  right: 10%;
+  top: 95%;
+}
+
+ /***************CONTENU - Tarifs**************************/
+
+ .tarifs {
+  background: linear-gradient(80deg, #CA9D68, var(--sectionBeige));
+  height: 110vh; 
+}
+
+.container-tarifs {
+  display: flex;
+  flex-direction: row;
+  padding-right: 4em; padding-left: 4em;
+}
+
+.carte-tarif {
+  padding: 1em;
+  width: 40vw;
+  height: 30vw;
+}
+
+.carte-tarif .texte-tarifs {
+ padding-bottom: 15%;
+}
+
+.carte-tarif .bouton-tarifs {
+  margin: auto;
+  
+}
+
+
+/*************************CONTENU - Starters*****************/
+
+#encadrement {
+  position: relative;
+  display: block;
+  max-width: 90%;
+  margin: auto;
+  padding-top: 8em;
+}
+
+.titre-pompe {
+ position: absolute;
+ z-index: 500;
+ transform: translateY(-50vw);
+left: 0;
+}
+
+.titre-pompe h5 {
+padding-bottom: 1.5em;
+ font-size: 4em;
+ max-width: 50%;
+}
+
+.titre-pompe img {
+  margin-left: -26vw;
+}
+
+.starters-detail {
+  margin-left: 26vw;
+  gap: 80px;
+  flex-direction: row;
+  transform: translateY(-40vw);
+}
+
+.picto {
+  max-width: 64%;
+  padding-bottom: 2.5em;
+}
+
+#oil {
+  max-width: 68%;
+  margin-bottom: 2em;
+}
+
+.items-menu {
+  font-size: 1.6em;
+  white-space: pre-line;
+}
+
+/**************************CONTACT********************************/
+.contact {
+  flex-direction: row;
+  gap: 80px;
+}
+
+.contact img {
+  max-width: 40%;
+}
+
+.coordonnees p {
+  text-align: left;
+  
+}
+
+/**************FOOTER************************/
+
+footer {
+  flex-direction: row;
+}
+
+footer #logo-footer {
+  max-width: 20%;
+  display: block;
+  margin: 0;
+  padding-right: 2em;
+  padding-left: 5em;
+}
+
+footer #motoline {
+  display: block;
+  max-width: 50%;  
+}
+
+footer ul {
+  align-items: flex-end;  
+}
+
+/*******************************Media query***************************************/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1400px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1400px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1400px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1400px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1400px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1400px) { 
+
+.titre-pompe h5 {
+   font-size: 1.5em;
+   width: 40%;
+}
+
+.titre-pompe img {
+  max-width: 75%;
+  margin-left: -38vw;
+}
+
+}
+
+
+}
